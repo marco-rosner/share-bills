@@ -34,6 +34,7 @@ class BillsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update bill" do
+    byebug
     patch bill_url(@bill), params: { bill: { date: @bill.date, place: @bill.place, user_id: @bill.user_id, value: @bill.value } }
     assert_redirected_to bill_url(@bill)
   end
