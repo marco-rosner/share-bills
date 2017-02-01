@@ -1,5 +1,6 @@
 language: ruby
+
+script: bundle exec rake spec
+
 rvm:
- - 2.2
- - jruby
- - rbx-2
+ - 2.3
