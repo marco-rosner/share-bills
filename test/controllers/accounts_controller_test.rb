@@ -2,7 +2,10 @@ require 'test_helper'
 
 class AccountsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @account = accounts(:one)
+    @user = users(:one)
+    @user.save
+    @account = Account.new(bank: "Bank", agency: 1723, number: 635371, user_id: @user.id)
+    @account.save
   end
 
   test "should get index" do
